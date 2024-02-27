@@ -52,5 +52,5 @@ La prueba se evaluará en base a los siguientes criterios:
 * 4 horas
 ## Instrucciones de carga
 
-* Crear una rama feature a partir del main, con los 3 últimos números de CI. Ejemplo: feature/dev123
+* Crear un fork del proyecto, registrarlo con los 3 últimos números de CI y solicitar el PR.
 
