@@ -1,5 +1,5 @@
 
-# Proyecto test
+# Proyecto
 
 
 Prueba Técnica para Desarrollador Java, Spring Boot y Docker
@@ -53,5 +53,7 @@ La prueba se evaluará en base a los siguientes criterios:
 * 4 horas
 ## Instrucciones de carga
 
-* Crear un fork del proyecto, registrarlo como "dev" seguido de los 3 últimos números de su CI y solicitar el PR. Ejemplo: "dev123"
+* Crear un fork del proyecto, registrarlo como "dev" seguido de los 3 últimos números de su CI. Ejemplo: "dev123"
+* Crear una rama feature a partir del main, con la misma metodología indicada arriba. Ejemplo: "feature/dev123"
+* Solicitar el PR
 
