@@ -47,10 +47,11 @@ La prueba se evaluará en base a los siguientes criterios:
 * Uso de Spring Boot: La aplicación debe aprovechar las características de Spring Boot para simplificar el desarrollo.
 * Uso de Docker: El Dockerfile debe estar correctamente escrito y permitir la construcción de la imagen de la aplicación.
 * Documentación: El README debe contener instrucciones claras y precisas para ejecutar la aplicación.
+* Se considerará la arquitectura del proyecto
 ## Tiempo estimado
 
 * 4 horas
 ## Instrucciones de carga
 
-* Crear un fork del proyecto, registrarlo con los 3 últimos números de CI y solicitar el PR.
+* Crear un fork del proyecto, registrarlo como "dev" seguido de los 3 últimos números de su CI y solicitar el PR. Ejemplo: "dev123"
 
