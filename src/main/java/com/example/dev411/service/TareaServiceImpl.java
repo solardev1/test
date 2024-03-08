@@ -46,7 +46,7 @@ public class TareaServiceImpl implements TareaService {
     @Override
     public String borrarTarea(Long id) {
         tareaRepository.deleteById(id); //borrar una tarea por id
-		return "id" + id + "Se ha borrado correctamente."; 
+		return "id " + id + " Se ha borrado correctamente."; 
     }
 
     @Override
@@ -65,4 +65,12 @@ public class TareaServiceImpl implements TareaService {
 		
 		return null;
     }
+    
+    @Override
+    // Método para verificar si una tarea con el ID especificado existe
+    public boolean existeTarea(Long id) {
+        Optional<Tarea> tareaOptional = tareaRepository.findById(id);
+        return tareaOptional.isPresent(); // Devuelve true si la tarea existe, false si no
+    }
+
 }

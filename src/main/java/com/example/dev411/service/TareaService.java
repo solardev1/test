@@ -17,4 +17,5 @@ public interface TareaService {
 	Tarea guardarTarea(Tarea tarea);
 	String borrarTarea(Long id);
 	Tarea actualizarTarea(Long id, Tarea tarea);
+	boolean existeTarea(Long id);
 }

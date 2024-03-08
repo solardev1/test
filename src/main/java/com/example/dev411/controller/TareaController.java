@@ -8,6 +8,7 @@ import com.example.dev411.model.Tarea;
 import com.example.dev411.service.TareaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,7 +55,15 @@ public class TareaController {
     }
 
     @DeleteMapping("/tarea/{id}")
-    public String borrarTarea(@PathVariable("id") Long id) {
-        return tareaService.borrarTarea(id);
+    public ResponseEntity<String> borrarTarea(@PathVariable("id") Long id) {
+                // Verifica si la tarea con el ID especificado existe en tu capa de servicio o en tu base de datos
+        if (!tareaService.existeTarea(id)) {
+            // Si no existe, devuelve una respuesta con el código de estado 404
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró la tarea con el ID: " + id);
+        }
+        
+        // Si la tarea existe, procede a borrarla
+        String mensaje = tareaService.borrarTarea(id);
+        return ResponseEntity.ok(mensaje);
     }
 }
