@@ -11,5 +11,5 @@ Objetivo: Evaluar las habilidades del candidato en el desarrollo de aplicaciones
 - Se incluye una coleccion de postman para facilitar las pruebas (z01- CollectionSolarTest.postman_collection.json)
 - El respectivo archivo dockerfile se encuentra en la raiz.
 - Generar y ejecutar la imagen:
-  ![Uploading image.png…]()
-
+  - docker build apitareas2 .
+  - docker run -p 8000:8080 apitareas2
