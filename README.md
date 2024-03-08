@@ -44,7 +44,7 @@ Insertar tarea; Metodo POST
 {
     "id": 1,
     "nombre": "Tarea 1",
-    "descripion": "Tarea 1 Descripcion"
+    "descripcion": "Tarea 1 Descripcion"
 }
 
 ```
@@ -55,7 +55,7 @@ Actualizar tarea; Metodo PUT
 {
     "id": 1,
     "nombre": "Tarea 2",
-    "descripion": "Tarea 2 Descripcion"
+    "descripcion": "Tarea 2 Descripcion"
 }
 
 ```
