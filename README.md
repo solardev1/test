@@ -34,6 +34,10 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 Listar tareas; Metodo GET
 * http://localhost:8080/tareas
 
+Listar tarea por Id; Metodo GET
+
+* http://localhost:8080/tarea/2
+
 Insertar tarea; Metodo POST
 * http://localhost:8080/tarea
 ```json
@@ -43,6 +47,8 @@ Insertar tarea; Metodo POST
     "descripion": "Tarea 1 Descripcion"
 }
 
+```
+
 Actualizar tarea; Metodo PUT
 * http://localhost:8080/tarea/{id}
 ```json
@@ -51,6 +57,8 @@ Actualizar tarea; Metodo PUT
     "nombre": "Tarea 2",
     "descripion": "Tarea 2 Descripcion"
 }
+
+```
 
 Borrar tarea; metodo DELETE
 * http://localhost:8080/tarea/1
