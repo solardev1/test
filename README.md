@@ -9,5 +9,5 @@ Observaciones:
 - Se incluye todo el codigo.
 - Se incluye una coleccion de postman para facilitar las pruebas(z01- CollectionSolarTest.postman_collection.json)
 - Pasos para generar y correr la imagen de docker (en la coleccion el puerto es 8000):
-  - docker build apitareas2 .
+  - docker build -t apitareas2 .
   - docker run -p 8000:8080 apitareas2
