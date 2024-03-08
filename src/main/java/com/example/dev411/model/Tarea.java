@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table
 public class Tarea {
-    	@Column //defining id as primary key
+    	@Column //Primary Key
 	@Id
 	private Long id;
 	

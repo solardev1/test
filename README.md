@@ -36,7 +36,7 @@ Listar tareas; Metodo GET
 
 Listar tarea por Id; Metodo GET
 
-* http://localhost:8080/tarea/2
+* http://localhost:8080/tarea/{id}
 
 Insertar tarea; Metodo POST
 * http://localhost:8080/tarea
@@ -61,4 +61,4 @@ Actualizar tarea; Metodo PUT
 ```
 
 Borrar tarea; metodo DELETE
-* http://localhost:8080/tarea/1
+* http://localhost:8080/tarea/{id}
