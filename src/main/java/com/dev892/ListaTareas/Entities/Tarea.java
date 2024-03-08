@@ -2,7 +2,7 @@ package com.dev892.ListaTareas.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+//ENTIDAD EN H2
 @Entity
 @Table(name = "Tareas")
 @NoArgsConstructor

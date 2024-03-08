@@ -24,6 +24,7 @@ public class TareasController {
         this.tareaRepository = tareaRepository;
     }
 
+    // OBTENER LAS TAREAS
     @GetMapping("/tareas")
     public ResponseEntity<CustomResponseModel> GetAllTareas(){
         try {
@@ -39,6 +40,7 @@ public class TareasController {
         }
     }
 
+    //OBTENER UNA TAREA POR ID
     @GetMapping("/tareas/{id}")
     public ResponseEntity<CustomResponseModel> GetOneTarea(@PathVariable int id){
         try {
@@ -54,6 +56,7 @@ public class TareasController {
     }
 
 
+    //AGREGAR UNA TAREA
     @PostMapping("/tareas")
     public ResponseEntity<CustomResponseModel> AddTarea(@RequestBody Tarea tarea){
 
@@ -70,6 +73,7 @@ public class TareasController {
         }
     }
 
+    //ACTUALIZAR UNA TAREA
     @PutMapping("/tareas/{id}")
     public ResponseEntity<CustomResponseModel> UpdateTarea(@PathVariable("id") int id, @RequestBody Tarea newTarea){
 
@@ -92,6 +96,7 @@ public class TareasController {
         }
     }
 
+    //BORRAR UNA TAREA
     @DeleteMapping("/tareas/{id}")
     public ResponseEntity<CustomResponseModel> DeleteTarea(@PathVariable("id") int id){
 

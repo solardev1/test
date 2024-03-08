@@ -1,5 +1,6 @@
 package com.dev892.ListaTareas.CustomModels;
 
+// MODELO PERSONALIZADO PARA LAS RESPUESTAS DE LA API
 public class CustomResponseModel {
     public int getStatus() {
         return status;
