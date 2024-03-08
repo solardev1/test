@@ -1,4 +1,4 @@
-docker build apitareas2 .
+docker build -t apitareas2 .
 
 docker images
 
