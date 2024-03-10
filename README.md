@@ -97,7 +97,7 @@ Swagger-UI: http://168.138.229.59:8080/swagger-ui/index.html
 2. **Responsive Design:**
    - La aplicación es completamente responsive para garantizar una experiencia de usuario consistente en diferentes dispositivos (computadoras de escritorio, tabletas, teléfonos).
 3. **Almacenamiento de Datos:**
-   - Almacenamiento local con SQLite.
+   - Almacenamiento local con Hibernate H2 memory.
 4. **Seguridad:**
    - Implementa medidas básicas de seguridad para proteger los datos del usuario, especialmente si se almacenan en algún tipo de base de datos.
 5. **Interfaz de Usuario Intuitiva:**
