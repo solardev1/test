@@ -108,7 +108,7 @@ Para levantar el contenedor sigue los siguientes pasos:
 
 1. Clona este repositorio en tu máquina local.
 ```sh
-git clone https://github.com/dannycoin/taskboot.git
+git clone https://github.com/dannycoin/dev781.git
 ```
 2. En la raiz del proyecto ejecuta el siguiente comando:
 ```sh
