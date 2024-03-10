@@ -64,7 +64,7 @@ VERSION: 1.0.0
 
 Desarrollador: Daniel Prats.
 
-![TaskBoot](imgs/screen_00.png)
+![TaskBoot](imgs/screen_01.png)
 
 ## Descripción del Proyecto
 Aplicación web responsive que funciona como un Kanban básico. El principal objetivo de la aplicación es permitir a los usuarios agregar tareas a un tablero, cambiar el estado de las tareas entre tres opciones: Pendiente, En Proceso y Finalizado, y proporcionar información básica sobre cada tarea.
