@@ -36,10 +36,10 @@ public class TaskService {
         Optional<Task> optionalTask = taskRepository.findById(id);
         if(optionalTask.isPresent()){
             Task existingTask = optionalTask.get();
-            existingTask.setName(taskToUpdate.getName());
-            existingTask.setDescription(taskToUpdate.getDescription());
-            existingTask.setStatus(taskToUpdate.getStatus());
-            existingTask.setAssignee(taskToUpdate.getAssignee());
+            if (taskToUpdate.getName() != null) existingTask.setName(taskToUpdate.getName());
+            if (taskToUpdate.getDescription() != null) existingTask.setDescription(taskToUpdate.getDescription());
+            if (taskToUpdate.getStatus() != null) existingTask.setStatus(taskToUpdate.getStatus());
+            if (taskToUpdate.getAssignee() != null) existingTask.setAssignee(taskToUpdate.getAssignee());
             return taskRepository.save(existingTask);
         } else {
             return null; // O manejar la excepción según sea necesario
