@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Permite CORS en todas las rutas
-                .allowedOrigins("http://localhost:5173") // Permite solicitudes desde este origen
+                .allowedOrigins("http://localhost") // Permite solicitudes desde este origen
                 .allowedMethods("*") // Permite todos los métodos HTTP, incluido DELETE
                 .allowedHeaders("*") // Permite todas las cabeceras
                 .allowCredentials(true); // Permite credenciales

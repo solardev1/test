@@ -71,6 +71,11 @@ Aplicación web responsive que funciona como un Kanban básico. El principal obj
 
 Live Preview: http://168.138.229.59/solar/taskboot/
 
+### API Documentación | Endpoints (Swagger)
+Swagger-UI: http://168.138.229.59:8080/swagger-ui/index.html
+
+![Swagger-UI](imgs/swagger.png)
+
 ## Especificaciones Funcionales
 1. **Listado de Tareas:**
    - El tablero tiene tres columnas: Pendiente, En Proceso y Finalizado.
