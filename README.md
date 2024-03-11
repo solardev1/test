@@ -121,7 +121,7 @@ Para instalar y utilizar la aplicación de forma local, sigue estos pasos:
 
 1. Clona este repositorio en tu máquina local.
 ```sh
-git clone https://github.com/dannycoin/taskboot.git
+git clone https://github.com/dannycoin/dev781.git
 ```
 #### Backend
 
