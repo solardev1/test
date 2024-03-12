@@ -1,59 +1,71 @@
+# Nombre de tu Task
 
-# Proyecto
-
-
-Prueba Técnica para Desarrollador Java, Spring Boot y Docker
-
-Objetivo: Evaluar las habilidades del candidato en el desarrollo de aplicaciones Java con Spring Boot y la implementación de Docker para la contenerización y despliegue.
-
+- Este proyecto realiza un CRUD básico sobre una tabla tareas creada con H2 y Java JPA
+- cumple eficientemente con dichas funcioes y cuenta con validacion importantes. 
 
 ## Requisitos
 
-* Experiencia en Java (Versión 11 min)
-* Conocimiento de Spring Boot (2.7 min)
-* Experiencia con Docker
-* Capacidad de análisis y resolución de problemas
-* Habilidad para trabajar de forma autónoma y en equipo
+- Java 11 instalado en tu máquina.
+- Docker instalado en tu máquina (opcional, si deseas ejecutar la aplicación en un contenedor Docker).
+- Se puede levantar la aplicacion localmente con el p
 
+## Ejecución
 
+### Ejecución sin Docker
 
-## Descripción de la prueba
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal y navega al directorio raíz del proyecto.
+3. Ejecuta el siguiente comando para compilar la aplicación:
+4. Una vez compilada la aplicación, ejecuta el siguiente comando para iniciarla:
+   java -jar deploy/task-1.0.0.jar
+5. La aplicación estará disponible en http://localhost:8081.
 
-El candidato deberá desarrollar una aplicación web simple utilizando Spring Boot que exponga un API REST para la gestión de una lista de tareas. La aplicación deberá cumplir con los siguientes requisitos:
-## Funcionalidades
+### Ejecución con Docker
 
-* Listar todas las tareas
-* Agregar una nueva tarea
-* Eliminar una tarea
-* Actualizar una tarea
-## Tecnologías
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal y navega al directorio raíz del proyecto.
+3. Ejecuta el siguiente comando para construir la imagen Docker:
+   docker build -t task-1.0.0.jar .
+4. Una vez construida la imagen, ejecuta el siguiente comando para iniciar un contenedor:
+   docker run -p 8081:8081 task-1.0.0.jar
+5. La aplicación estará disponible en http://localhost:8081.
+6. los diferentes patch serian 
+- Metodo GET --con o sin parametros
+- http://localhost:8081/task/api/v1/taskList?estado=en_progreso&fecha_limite=2024-03-15
+- http://localhost:8081/task/api/v1/taskList
+  
+- Metodo PUT
+- http://localhost:8081/task/api/v1/updTask
+- body
+  {
+  "id": 1,
+  "nombre": "Hacer la compra",
+  "descripcion": "Cambiar y mejorar un sistema de TRAFICO",
+  "fecha_limite": "2024-07-30",
+  "estado": "pendiente"
+  }
+- Metodo POST
+- http://localhost:8081/task/api/v1/insTask
+- body
+  {
+  {
+  "nombre": "Preparar informe",
+  "descripcion": "Redactar el informe mensual de ventas",
+  "fecha_limite": "2024-03-20",
+  "estado": "en_progreso"
+  }
 
-* Java
-* Spring Boot
-* Spring Data JPA
-* H2 (base de datos en memoria)
-* Docker
-## Entregables
+- Metodo DELETE
+- http://localhost:8081/task/api/v1/delTask?id=1
 
-* Código fuente de la aplicación Java
-* Dockerfile para la construcción de la imagen
-* README con instrucciones para ejecutar la aplicación
-## Evaluación
+  
+## Contribución
 
-La prueba se evaluará en base a los siguientes criterios:
+Si deseas contribuir a este proyecto, sigue estos pasos:
 
-* Corrección funcional: La aplicación debe cumplir con todas las funcionalidades especificadas.
-* Calidad del código: El código debe ser limpio, legible y bien documentado.
-* Uso de Spring Boot: La aplicación debe aprovechar las características de Spring Boot para simplificar el desarrollo.
-* Uso de Docker: El Dockerfile debe estar correctamente escrito y permitir la construcción de la imagen de la aplicación.
-* Documentación: El README debe contener instrucciones claras y precisas para ejecutar la aplicación.
-* Se considerará la arquitectura del proyecto
-## Tiempo estimado
-
-* 4 horas
-## Instrucciones de carga
-
-* Crear un fork del proyecto, registrarlo como "dev" seguido de los 3 últimos números de su CI. Ejemplo: "dev123"
-* Crear una rama feature a partir del main, con la misma metodología indicada arriba. Ejemplo: "feature/dev123"
-* Solicitar el PR
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commits (`git commit -am 'Añadir nueva funcionalidad'`).
+4. Sube los cambios a tu repositorio fork (`git push origin feature/nueva-funcionalidad`).
+5. Crea un pull request.
 
