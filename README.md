@@ -7,7 +7,7 @@
 
 - Java 11 instalado en tu máquina.
 - Docker instalado en tu máquina (opcional, si deseas ejecutar la aplicación en un contenedor Docker).
-- Se puede levantar la aplicacion localmente con el p
+- Se puede levantar la aplicación localmente
 
 ## Ejecución
 
@@ -29,12 +29,13 @@
 4. Una vez construida la imagen, ejecuta el siguiente comando para iniciar un contenedor:
    docker run -p 8081:8081 task-1.0.0.jar
 5. La aplicación estará disponible en http://localhost:8081.
-6. los diferentes patch serian 
-- Metodo GET --con o sin parametros
+
+### Los diferentes metodos de ejecucion serian:
+### Metodo GET --con o sin parametros
 - http://localhost:8081/task/api/v1/taskList?estado=en_progreso&fecha_limite=2024-03-15
 - http://localhost:8081/task/api/v1/taskList
-  
-- Metodo PUT
+
+### Metodo PUT
 - http://localhost:8081/task/api/v1/updTask
 - body
   {
@@ -44,7 +45,7 @@
   "fecha_limite": "2024-07-30",
   "estado": "pendiente"
   }
-- Metodo POST
+### Metodo POST
 - http://localhost:8081/task/api/v1/insTask
 - body
   {
@@ -55,7 +56,7 @@
   "estado": "en_progreso"
   }
 
-- Metodo DELETE
+### Metodo DELETE
 - http://localhost:8081/task/api/v1/delTask?id=1
 
   
@@ -68,4 +69,5 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 3. Realiza tus cambios y haz commits (`git commit -am 'Añadir nueva funcionalidad'`).
 4. Sube los cambios a tu repositorio fork (`git push origin feature/nueva-funcionalidad`).
 5. Crea un pull request.
+
 
