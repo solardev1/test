@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  solar-frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    volumes:
+      - ./client:/app
+
+  solar-backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server:/app
+    command: ./mvnw spring-boot:run
+    depends_on:
+      - solar-frontend

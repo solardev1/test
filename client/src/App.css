@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------------------------------------------- */
+
+.board {
+  display: flex;
+  gap: 30px;;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.column-container {
+  border-radius: 20px;
+  width: -webkit-fill-available;
+  background-color: rgba(24, 24, 24, 0.87);
+}
+
+.column-tasks {
+  /* flex: 1; */
+  height: 70vh;
+  margin: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.column-tasks h2 {
+  text-align: center;
+  margin: 0px;
+}
+
+.task {
+  margin: 10px 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  line-height: normal;
+  cursor: move;
+}
+
+.pendiente {
+  color: yellow;
+}
+.procesando {
+  color: cyan;
+}
+.finalizado {
+  color: lime;
+  text-decoration:line-through;
+}
+
+.add-task-form {
+  margin-top: 20px;
+}
+
+.add-task-form input,
+.add-task-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.add-task-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  border-color: white;
+}
+
+.close-btn {
+  float: right;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0px 6px;
+  margin: -8px;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  float: left;
+  padding: 0px 6px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.footer {  
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
