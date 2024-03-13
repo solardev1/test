@@ -1,4 +1,4 @@
-# Nombre de tu Task
+# TASK - Tareas
 
 - Este proyecto realiza un CRUD básico sobre una tabla tareas creada con H2 y Java JPA
 - cumple eficientemente con dichas funcioes y cuenta con validacion importantes. 
