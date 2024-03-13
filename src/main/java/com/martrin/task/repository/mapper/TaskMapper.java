@@ -12,6 +12,7 @@ import java.util.List;
 
 @Mapper
 public interface TaskMapper {
+
     @Autowired
     void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory);
 

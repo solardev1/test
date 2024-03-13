@@ -1,6 +1,6 @@
 package com.martrin.task.controller;
 import com.martrin.task.model.param.TaskParam;
-import com.martrin.task.service.TaskService;
+import com.martrin.task.service.TaskServiceImpl;
 import com.martrin.task.util.ApplicationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +23,7 @@ public class TaskController {
     private static final Logger logger = LoggerFactory.getLogger(TaskController.class);
 
     @Autowired
-    private TaskService taskService;
+    private TaskServiceImpl taskServiceImpl;
 
     /**
      // --> SELECT SECTION
@@ -33,7 +33,7 @@ public class TaskController {
     @GetMapping("/taskList")
     public ResponseEntity<?> taskList(@QueryParam("estado") String estado,
                                       @QueryParam("fecha_limite") String fecha_limite) throws ApplicationException.NotFound {
-        return ResponseEntity.ok(taskService.taskList(estado, fecha_limite));
+        return ResponseEntity.ok(taskServiceImpl.taskList(estado, fecha_limite));
     }
 
 
@@ -44,7 +44,7 @@ public class TaskController {
      */
     @PutMapping("/updTask")
     private ResponseEntity<?> updTask(@RequestBody TaskParam taskParam) throws ApplicationException.IllegalArgument {
-        return ResponseEntity.ok(taskService.updTask(taskParam));
+        return ResponseEntity.ok(taskServiceImpl.updTask(taskParam));
     }
 
 
@@ -55,7 +55,7 @@ public class TaskController {
      */
     @PostMapping("/insTask")
     private ResponseEntity<?> insTask(@RequestBody TaskParam taskParam) throws ApplicationException.IllegalArgument {
-        return ResponseEntity.ok(taskService.insTask(taskParam));
+        return ResponseEntity.ok(taskServiceImpl.insTask(taskParam));
     }
 
     /**
@@ -65,7 +65,7 @@ public class TaskController {
      */
     @DeleteMapping("/delTask")
     private ResponseEntity<?> delTask(@QueryParam("id") Integer id) throws ApplicationException.IllegalArgument {
-        return ResponseEntity.ok(taskService.delTask(id));
+        return ResponseEntity.ok(taskServiceImpl.delTask(id));
     }
 
 }
